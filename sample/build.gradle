@@ -1,6 +1,8 @@
 buildscript {
     repositories {
         jcenter()
+        google()
+        mavenCentral()
     }
     dependencies {
         classpath 'com.neenbedankt.gradle.plugins:android-apt:1.4'
@@ -9,6 +11,7 @@ buildscript {
 
 repositories {
     maven { url 'https://github.com/dahlgren/vpi-aar/raw/master' }
+    maven { url uri('/Users/rjy/github/AndroidVideoCache/library/build/repo') }
 }
 
 apply plugin: 'com.android.application'
@@ -38,7 +41,7 @@ dependencies {
 //    compile project(':library')
     compile 'com.android.support:support-v4:23.1.0'
     compile 'org.androidannotations:androidannotations-api:3.3.2'
-    compile 'com.danikula:videocache:2.7.1'
+    compile 'com.danikula:videocache:2.7.1-rjy'
     compile 'com.viewpagerindicator:library:2.4.2-SNAPSHOT@aar'
     apt 'org.androidannotations:androidannotations:3.3.2'
 }
